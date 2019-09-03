@@ -1,0 +1,27 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: flask-mma-deployment
+  labels:
+    name: flask-mma-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: flask-mma-app
+  template:
+    metadata:
+      labels:
+        app: flask-mma-app
+    spec:
+      containers:
+        - name: flask-mma-app-0
+          image: my_docker_flask
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 5000
+          resources:
+            requests:
+              memory: 256Mi
+            limits:
+              memory: 512Mi
