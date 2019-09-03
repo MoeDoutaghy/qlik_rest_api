@@ -46,7 +46,7 @@ If you have curl installed in your environment, you could run the api_test.sh sc
 *Kubernetes*
 ----
 
-Kubernetes deployment was not fully tested for this application. The docker image should exist in the local repo on the host in which you are running the deployment from as well as on the node in which the pods will run. This was not a issue if the docker image was available in a repo where the deployment could access and downaload it. 
+Kubernetes deployment was not fully tested for this application. The docker image should exist in the local repo on the host in which you are running the deployment from as well as on the node in which the pods will run. This was not an issue if the docker image was available in a repo where the deployment could access and downaload it. 
 
 To deploy using kubectl:
 - sudo kubectl apply -f deployment.yml
