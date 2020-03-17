@@ -8,23 +8,27 @@ Here are the API end-points:
 - GET			
     - http://[IP]/v1/mma/messages/all		
     - Retrieve list of messages
+    - Example: http://127.0.0.1:5000/v1/mma/messages/all
+
 - GET			
     - http://[IP]/v1/mma/messages			
     - Retrieve a message
+    - Example: http://127.0.0.1:5000/v1/mma/messages?id=1
+
 - POST		    
     - http://[IP]/v1/mma/messages			
     - Create a new message
+    - Example: curl -i -H "Content-Type: application/json" -X POST -d '{"message": "hello Moe"}' http://127.0.0.1:5000/v1/mma/messages
+
 - PUT			
     - http://[IP]/v1/mma/messages			
     - Update and existing message		
+    - Example: curl -i -H "Content-Type: application/json" -X PUT -d '{"message": "hello Moe", "id": 1}' http://127.0.0.1:5000/v1/mma/messages
+    
 - DELETE		
     - http://[IP]/v1/mma/messages			
     - Delete a message
-
-
-Example:
--  http://127.0.0.1:5000/v1/mma/messages/all
-
+    - Example: curl -i -H "Content-Type: application/json" -X DELETE -d '{"id": 1}' http://127.0.0.1:5000/v1/mma/messages
 
 Parameter: 
 - id: 			unique identifier for messages. Numeric type.
